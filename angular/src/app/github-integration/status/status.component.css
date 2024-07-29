@@ -1,0 +1,56 @@
+.lm-5 {
+  margin-left: 5px;
+}
+
+.integration-card {
+  margin: 20px;
+}
+
+.github-icon {
+  background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+}
+
+mat-card-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.p-0{
+  padding: 0;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  color: #777676;
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 1rem !important;
+  line-height: 1.3;
+}
+
+mat-card-content p {
+  margin: 0;
+}
+
+button {
+  margin: 10px 0;
+}
+
+.mat-header-text-icon-aliging{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.ms-auto{
+  margin-left: auto;
+}

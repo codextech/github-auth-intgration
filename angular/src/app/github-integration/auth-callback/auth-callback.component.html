@@ -1,0 +1,15 @@
+<div *ngIf="hasError; else successContent">
+  <mat-card class="error-card">
+    <mat-card-header>
+      <mat-card-title>Error</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="danger-text">{{ errorMessage }}</p>
+      <button mat-raised-button color="primary" (click)="redirectToHome()">Go to Home</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #successContent>
+  Loading...
+</ng-template>

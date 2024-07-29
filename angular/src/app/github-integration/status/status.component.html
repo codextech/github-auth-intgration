@@ -1,0 +1,39 @@
+<mat-card class="integration-card">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-card-header class="p-0" >
+        <div mat-card-avatar class="github-icon"></div>
+
+        <div class="mat-header-text-icon-aliging">
+          <mat-card-title>Github</mat-card-title>
+          <mat-card-subtitle *ngIf="isConnected">
+            <mat-icon class="mat-success">check_circle</mat-icon>
+            <mat-icon>history</mat-icon>
+          </mat-card-subtitle>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="p-0 ms-auto" *ngIf="isConnected" style="padding-bottom: 0;">
+        <p>Admin: Last Synced: {{ userStatus.connectedAt | date:'yyyy-MM-dd HH:mm' }}</p>
+        <p class="lm-5">Sync Type: full</p>
+      </mat-card-content>
+    </mat-expansion-panel-header>
+
+    <div  *ngIf="isConnected">
+      <div class="text-center-right">
+      <button mat-raised-button color="primary" (click)="removeIntegration()" [disabled]="isLoading" >{{isLoading ? 'Loading...' : 'Remove'}}</button>
+      </div>
+
+    </div>
+
+
+    <!-- login github button -->
+
+    <div *ngIf="!isConnected" class="text-center">
+
+      <button mat-raised-button color="primary" (click)="connect()" [disabled]="isLoading" >{{isLoading ? 'Loading...' : 'Connect'}}</button>
+      <br>
+      <p class="text-primary">Connect Sredio to Github</p>
+    </div>
+
+  </mat-expansion-panel>
+</mat-card>
